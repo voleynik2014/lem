@@ -2283,6 +2283,33 @@ src/ft_create.c.s:
 	$(MAKE) -f CMakeFiles/lem_in1.dir/build.make CMakeFiles/lem_in1.dir/src/ft_create.c.s
 .PHONY : src/ft_create.c.s
 
+src/ft_delete_lemin_things.o: src/ft_delete_lemin_things.c.o
+
+.PHONY : src/ft_delete_lemin_things.o
+
+# target to build an object file
+src/ft_delete_lemin_things.c.o:
+	$(MAKE) -f CMakeFiles/lem_in1.dir/build.make CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.o
+.PHONY : src/ft_delete_lemin_things.c.o
+
+src/ft_delete_lemin_things.i: src/ft_delete_lemin_things.c.i
+
+.PHONY : src/ft_delete_lemin_things.i
+
+# target to preprocess a source file
+src/ft_delete_lemin_things.c.i:
+	$(MAKE) -f CMakeFiles/lem_in1.dir/build.make CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.i
+.PHONY : src/ft_delete_lemin_things.c.i
+
+src/ft_delete_lemin_things.s: src/ft_delete_lemin_things.c.s
+
+.PHONY : src/ft_delete_lemin_things.s
+
+# target to generate assembly for a file
+src/ft_delete_lemin_things.c.s:
+	$(MAKE) -f CMakeFiles/lem_in1.dir/build.make CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.s
+.PHONY : src/ft_delete_lemin_things.c.s
+
 src/ft_lem_in.o: src/ft_lem_in.c.o
 
 .PHONY : src/ft_lem_in.o
@@ -2336,6 +2363,114 @@ src/ft_read.s: src/ft_read.c.s
 src/ft_read.c.s:
 	$(MAKE) -f CMakeFiles/lem_in1.dir/build.make CMakeFiles/lem_in1.dir/src/ft_read.c.s
 .PHONY : src/ft_read.c.s
+
+src/ft_realloc_lemin.o: src/ft_realloc_lemin.c.o
+
+.PHONY : src/ft_realloc_lemin.o
+
+# target to build an object file
+src/ft_realloc_lemin.c.o:
+	$(MAKE) -f CMakeFiles/lem_in1.dir/build.make CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.o
+.PHONY : src/ft_realloc_lemin.c.o
+
+src/ft_realloc_lemin.i: src/ft_realloc_lemin.c.i
+
+.PHONY : src/ft_realloc_lemin.i
+
+# target to preprocess a source file
+src/ft_realloc_lemin.c.i:
+	$(MAKE) -f CMakeFiles/lem_in1.dir/build.make CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.i
+.PHONY : src/ft_realloc_lemin.c.i
+
+src/ft_realloc_lemin.s: src/ft_realloc_lemin.c.s
+
+.PHONY : src/ft_realloc_lemin.s
+
+# target to generate assembly for a file
+src/ft_realloc_lemin.c.s:
+	$(MAKE) -f CMakeFiles/lem_in1.dir/build.make CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.s
+.PHONY : src/ft_realloc_lemin.c.s
+
+src/ft_validation.o: src/ft_validation.c.o
+
+.PHONY : src/ft_validation.o
+
+# target to build an object file
+src/ft_validation.c.o:
+	$(MAKE) -f CMakeFiles/lem_in1.dir/build.make CMakeFiles/lem_in1.dir/src/ft_validation.c.o
+.PHONY : src/ft_validation.c.o
+
+src/ft_validation.i: src/ft_validation.c.i
+
+.PHONY : src/ft_validation.i
+
+# target to preprocess a source file
+src/ft_validation.c.i:
+	$(MAKE) -f CMakeFiles/lem_in1.dir/build.make CMakeFiles/lem_in1.dir/src/ft_validation.c.i
+.PHONY : src/ft_validation.c.i
+
+src/ft_validation.s: src/ft_validation.c.s
+
+.PHONY : src/ft_validation.s
+
+# target to generate assembly for a file
+src/ft_validation.c.s:
+	$(MAKE) -f CMakeFiles/lem_in1.dir/build.make CMakeFiles/lem_in1.dir/src/ft_validation.c.s
+.PHONY : src/ft_validation.c.s
+
+src/permutation.o: src/permutation.c.o
+
+.PHONY : src/permutation.o
+
+# target to build an object file
+src/permutation.c.o:
+	$(MAKE) -f CMakeFiles/lem_in1.dir/build.make CMakeFiles/lem_in1.dir/src/permutation.c.o
+.PHONY : src/permutation.c.o
+
+src/permutation.i: src/permutation.c.i
+
+.PHONY : src/permutation.i
+
+# target to preprocess a source file
+src/permutation.c.i:
+	$(MAKE) -f CMakeFiles/lem_in1.dir/build.make CMakeFiles/lem_in1.dir/src/permutation.c.i
+.PHONY : src/permutation.c.i
+
+src/permutation.s: src/permutation.c.s
+
+.PHONY : src/permutation.s
+
+# target to generate assembly for a file
+src/permutation.c.s:
+	$(MAKE) -f CMakeFiles/lem_in1.dir/build.make CMakeFiles/lem_in1.dir/src/permutation.c.s
+.PHONY : src/permutation.c.s
+
+src/some_calc.o: src/some_calc.c.o
+
+.PHONY : src/some_calc.o
+
+# target to build an object file
+src/some_calc.c.o:
+	$(MAKE) -f CMakeFiles/lem_in1.dir/build.make CMakeFiles/lem_in1.dir/src/some_calc.c.o
+.PHONY : src/some_calc.c.o
+
+src/some_calc.i: src/some_calc.c.i
+
+.PHONY : src/some_calc.i
+
+# target to preprocess a source file
+src/some_calc.c.i:
+	$(MAKE) -f CMakeFiles/lem_in1.dir/build.make CMakeFiles/lem_in1.dir/src/some_calc.c.i
+.PHONY : src/some_calc.c.i
+
+src/some_calc.s: src/some_calc.c.s
+
+.PHONY : src/some_calc.s
+
+# target to generate assembly for a file
+src/some_calc.c.s:
+	$(MAKE) -f CMakeFiles/lem_in1.dir/build.make CMakeFiles/lem_in1.dir/src/some_calc.c.s
+.PHONY : src/some_calc.c.s
 
 # Help Target
 help:
@@ -2586,12 +2721,27 @@ help:
 	@echo "... src/ft_create.o"
 	@echo "... src/ft_create.i"
 	@echo "... src/ft_create.s"
+	@echo "... src/ft_delete_lemin_things.o"
+	@echo "... src/ft_delete_lemin_things.i"
+	@echo "... src/ft_delete_lemin_things.s"
 	@echo "... src/ft_lem_in.o"
 	@echo "... src/ft_lem_in.i"
 	@echo "... src/ft_lem_in.s"
 	@echo "... src/ft_read.o"
 	@echo "... src/ft_read.i"
 	@echo "... src/ft_read.s"
+	@echo "... src/ft_realloc_lemin.o"
+	@echo "... src/ft_realloc_lemin.i"
+	@echo "... src/ft_realloc_lemin.s"
+	@echo "... src/ft_validation.o"
+	@echo "... src/ft_validation.i"
+	@echo "... src/ft_validation.s"
+	@echo "... src/permutation.o"
+	@echo "... src/permutation.i"
+	@echo "... src/permutation.s"
+	@echo "... src/some_calc.o"
+	@echo "... src/some_calc.i"
+	@echo "... src/some_calc.s"
 .PHONY : help
 
 

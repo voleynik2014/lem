@@ -84,8 +84,13 @@ set(CMAKE_DEPENDS_CHECK_C
   "/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/ft_build_new_way.c" "/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/cmake-build-debug/CMakeFiles/lem_in1.dir/src/ft_build_new_way.c.o"
   "/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/ft_calc_optimal_way.c" "/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/cmake-build-debug/CMakeFiles/lem_in1.dir/src/ft_calc_optimal_way.c.o"
   "/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/ft_create.c" "/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/cmake-build-debug/CMakeFiles/lem_in1.dir/src/ft_create.c.o"
+  "/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/ft_delete_lemin_things.c" "/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/cmake-build-debug/CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.o"
   "/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/ft_lem_in.c" "/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/cmake-build-debug/CMakeFiles/lem_in1.dir/src/ft_lem_in.c.o"
   "/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/ft_read.c" "/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/cmake-build-debug/CMakeFiles/lem_in1.dir/src/ft_read.c.o"
+  "/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/ft_realloc_lemin.c" "/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/cmake-build-debug/CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.o"
+  "/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/ft_validation.c" "/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/cmake-build-debug/CMakeFiles/lem_in1.dir/src/ft_validation.c.o"
+  "/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/permutation.c" "/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/cmake-build-debug/CMakeFiles/lem_in1.dir/src/permutation.c.o"
+  "/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/some_calc.c" "/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/cmake-build-debug/CMakeFiles/lem_in1.dir/src/some_calc.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

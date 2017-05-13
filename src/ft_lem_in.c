@@ -1,26 +1,43 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lem_in.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: voliynik <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/05/04 20:39:51 by voliynik          #+#    #+#             */
+/*   Updated: 2017/05/04 20:44:13 by voliynik         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <lem_in.h>
 
 void	get_num_ants(t_data *data)
 {
 	char	*line;
+	int		i;
 
-	data->rooms = (t_lem **)malloc(sizeof(t_lem *) * 101);
-    int i = -1;
-    while (++i < 101)
-        data->rooms[i] = NULL;
-	while (get_next_line(data->fd, &line))
-	{
-		if (ft_strequ(line, "##start"))
-		{
-			ft_read_line(data, line);
-			break ;	
-		}
-		if (line[0] == '#' && line[1] != '#')
-			ft_strdel(&line);
-		else
-			exit (ft_printf("Incorrect input\n") - 15);
-	}
+	i = -1;
+	data->rooms = (t_lem **)malloc(sizeof(t_lem *) * 101);  // realloc rooms when them more then 100 pieces// checked
+	while (++i < 101)
+		data->rooms[i] = NULL;
+	if (!get_next_line(data->fd, &line)) // проверить валидность что бы были только цифры  // checked
+		line = NULL;
+	if (check_valid_count_ants(line))
+		data->total_ants = atoi(line);
+	ft_strdel(&line);
+//	while (get_next_line(data->fd, &line))
+//	{
+//		if (ft_strequ(line, "##start"))
+//		{
+			if (!ft_read_line(data, line))
+//			break ;
+//		}
+//		if (line[0] == '#' && line[1] != '#')
+//			ft_strdel(&line);
+//		else
+			exit(ft_printf("Incorrect input\n") - 15);
+//	}
 }
 
 void	ft_print_map(t_data *data, t_lem **rooms)
@@ -29,46 +46,40 @@ void	ft_print_map(t_data *data, t_lem **rooms)
 	int	j;
 
 	i = -1;
-    ft_printf("%s, ", data->rooms[0]->links[0]->name);
+	ft_printf("%s, ", data->rooms[0]->links[0]->name);
 	while (data->rooms[++i])
 	{
 		ft_printf("room \"%s\" has links:\t", data->rooms[i]->name);
 		j = -1;
-		while(data->rooms[i]->links[++j])
-//
+		while (data->rooms[i]->links[++j])
 			ft_printf("%s, ", data->rooms[i]->links[j]->name);
 		ft_printf("\n");
 	}
 }
 
-void	ft_lem_in()
+void	ft_lem_in(void)
 {
-	t_data *data;
+	t_data	*data;
+	int		i;
 
+	i = -1;
 	data = (t_data *)malloc(sizeof(t_data) * 1);
 	ft_bzero(data, sizeof(t_data));
 	data->fd = open("test.txt", O_RDONLY);
-	ft_printf("FD%d\n", data->fd);
 	get_num_ants(data);
-	ft_print_map(data, data->rooms);
-//	sleep(999);
-	ft_printf("FD%d\n", data->fd);
-    data->rooms_reserved = (t_lem **)malloc(sizeof(t_lem *) * data->count_rooms + 1);
-    int i = -1;
-    while (++i < data->count_rooms)
-        data->rooms_reserved[i] = NULL;
-//    bzero(data->rooms_reserved, sizeof(t_lem *));
-    data->all_possible_ways = (t_way **)malloc(sizeof(t_way *) * 101);
-//	bzero(data->roads_reserved, sizeof(t_lem **));
-    build_new_way(data, data->rooms[0]);
-	ft_printf("%d\n", data->count_rooms_in_theway);
-//    data->final_ways = (t_lem **)malloc(sizeof(t_lem *) * 11);
-
-    calc_optimal_way(data);
-//	ft_printf("%s, %d, %d\n", data->rooms[0]->name, data->rooms[0]->x, data->rooms[0]->y);
+//	ft_print_map(data, data->rooms);
+	data->rooms_reserved = (t_lem **)
+		malloc(sizeof(t_lem *) * data->count_rooms + 1);
+	while (++i < data->count_rooms)
+		data->rooms_reserved[i] = NULL;
+	data->all_possible_ways = (t_way **)malloc(sizeof(t_way *) * 101);
+	build_new_way(data, data->rooms[0]);
+//	data->num_ants = 1;
+	data->start_room->count_ants = 1;
+	calc_optimal_way(data);
 }
 
-int main(void)
+int		main(void)
 {
 	ft_lem_in();
 	return (0);

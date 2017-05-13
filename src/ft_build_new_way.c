@@ -1,74 +1,92 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_build_new_way.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: voliynik <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/05/04 20:36:52 by voliynik          #+#    #+#             */
+/*   Updated: 2017/05/04 20:39:42 by voliynik         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <lem_in.h>
 
-t_way   *ft_save_road(t_data *data, t_lem **rooms_reserved)
+void	ft_print_rooms(t_way *res_way)
 {
-    t_way *res_way;
-    int i;
+	int i;
 
-    i = -1;
-    res_way = (t_way *)malloc(sizeof(t_way ) * data->count_rooms_in_theway + 1);
-//	data->count_rooms_in_theway = 0;
-//    while (rooms_reserved[++i])
-//       res_way[i] = rooms_reserved[i];
-//    res_way[i] = NULL;
-    res_way->room = (t_lem **)malloc(sizeof(t_lem *) * 101);
-    while (rooms_reserved[++i])
-        if (rooms_reserved[i + 1])
-            res_way->room[i] = rooms_reserved[i + 1];
-    res_way->room[i - 1] = NULL;
-    i = -1;
-    ft_printf("RESULT:");
-    while (res_way->room[++i])
-        ft_printf("-%s", res_way->room[i]->name);
-    ft_printf("\n");
-    res_way->performance = data->count_rooms_in_theway - 2;
-    i = -1;
-    while (data->rooms_reserved[++i]);
-    data->rooms_reserved[i - 1] = NULL;
-    data->count_rooms_in_theway--;
-    res_way->id = data->point;
-    ft_printf("%d - %d\n", res_way->id, res_way->performance);
-    return (res_way);
+	i = -1;
+	while (res_way->room[++i])
+		ft_printf("-%s", res_way->room[i]->name);
+	while (++i < 10)
+		ft_printf("  ");
+	ft_printf(" --> ");
+	ft_printf("%d - %d\n", res_way->id, res_way->performance);
 }
 
-int     no_repeat(t_data *data, t_lem *current_point)
+t_way	*ft_save_road(t_data *data, t_lem **rooms_reserved)
 {
-    int i;
+	t_way	*res_way;
+	int		i;
 
-    i = -1;
-    while(data->rooms_reserved[++i])
-        if (ft_strequ(data->rooms_reserved[i]->name, current_point->name))
-            return (0);
-    return (1);
-
+	i = -1;
+	res_way = (t_way *)malloc(sizeof(t_way ) * data->count_rooms_in_theway + 1);
+	res_way->room = (t_lem **)malloc(sizeof(t_lem *) * 101);
+	while (rooms_reserved[++i])
+		if (rooms_reserved[i + 1])
+			res_way->room[i] = rooms_reserved[i];
+	res_way->room[i - 1] = NULL;
+	res_way->performance = data->count_rooms_in_theway - 1;
+	i = -1;
+	while (data->rooms_reserved[++i])
+		;
+	data->rooms_reserved[i - 1] = NULL;
+	data->count_rooms_in_theway--;
+	res_way->id = data->point;
+//	ft_printf("RESULT:");
+//	ft_print_rooms(res_way);
+	return (res_way);
 }
 
-void    build_new_way(t_data *data, t_lem *current_point)
+int		no_repeat(t_data *data, t_lem *current_point)
 {
-    int i;
+	int i;
 
-    i = -1;
-    while (data->rooms_reserved[++i])
-        ;
-//		ft_printf("%s-", data->rooms_reserved[i]->name);
-//	ft_printf("\t\t\t +%s\n", current_point->name);
-    data->rooms_reserved[i++] = current_point;
+	i = -1;
+	while (data->rooms_reserved[++i])
+		if (ft_strequ(data->rooms_reserved[i]->name, current_point->name))
+			return (FALSE);
+	return (TRUE);
+}
+
+void	build_new_way(t_data *data, t_lem *current_point) {
+	int i;
+
+	i = -1;
+	while (data->rooms_reserved[++i]);
+	data->rooms_reserved[i++] = current_point;
 	data->count_rooms_in_theway++;
-    data->rooms_reserved[i] = NULL;
-    if (ft_strequ(current_point->name, data->rooms[data->count_rooms - 1]->name))
-	{
-        data->all_possible_ways[data->point++] = ft_save_road(data, data->rooms_reserved);
-		return ;
-		if (data->point == 10)
-			sleep(999);
+	data->rooms_reserved[i] = NULL;
+	if (ft_strequ(current_point->name,
+				  data->rooms[data->count_rooms - 1]->name)) {
+		if ((data->point % 100) == 0)
+			data->all_possible_ways = ft_realloc_ways(data, data->point + 101);
+		data->all_possible_ways[data->point++] =
+				ft_save_road(data, data->rooms_reserved);
+		return;
 	}
 	i = -1;
-    while (current_point->links[++i])
-        if (no_repeat(data, current_point->links[i]))
-           build_new_way(data, current_point->links[i]);
+	while (current_point->links[++i])
+	{
+		if ((i - 1) == current_point->link_size)
+			ft_realloc_current_room(current_point);
+		if (no_repeat(data, current_point->links[i]))
+			build_new_way(data, current_point->links[i]);
+	}
 	i = -1;
-    while (data->rooms_reserved[++i]);
-    data->rooms_reserved[i - 1] = NULL;
-    data->count_rooms_in_theway--;
+	while (data->rooms_reserved[++i])
+		;
+	data->rooms_reserved[i - 1] = NULL;
+	data->count_rooms_in_theway--;
 }

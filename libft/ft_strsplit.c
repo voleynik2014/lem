@@ -61,16 +61,18 @@ static char		*ft_passwd(const char *s, size_t wd_length)
 char			**ft_strsplit(char const *s, char c)
 {
 	char	**arr;
-	size_t	i;
+	int 	i;
 	size_t	j;
+	size_t 	arr_size;
 
-	i = 0;
 	j = 0;
 	if (s == NULL)
 		return (NULL);
-	if (!(arr = (char **)malloc(sizeof(char *) * (ft_countwd(s, c) + 1))))
+	arr_size = ft_countwd(s, c);
+	if (!(arr = (char **)malloc(sizeof(char *) * (arr_size + 1))))
 		return (NULL);
-	while (i < ft_countwd(s, c))
+	i = -1;
+	while (++i < arr_size)
 	{
 		while ((s[j] == c))
 			j++;
@@ -78,7 +80,6 @@ char			**ft_strsplit(char const *s, char c)
 			return (NULL);
 		while (s[j] != c && s[j])
 			j++;
-		i++;
 	}
 	arr[i] = 0;
 	return (arr);

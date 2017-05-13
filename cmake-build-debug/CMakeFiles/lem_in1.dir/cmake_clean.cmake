@@ -81,6 +81,11 @@ file(REMOVE_RECURSE
   "CMakeFiles/lem_in1.dir/src/ft_lem_in.c.o"
   "CMakeFiles/lem_in1.dir/src/ft_read.c.o"
   "CMakeFiles/lem_in1.dir/src/ft_calc_optimal_way.c.o"
+  "CMakeFiles/lem_in1.dir/src/permutation.c.o"
+  "CMakeFiles/lem_in1.dir/src/some_calc.c.o"
+  "CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.o"
+  "CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.o"
+  "CMakeFiles/lem_in1.dir/src/ft_validation.c.o"
   "lem_in1.pdb"
   "lem_in1"
 )

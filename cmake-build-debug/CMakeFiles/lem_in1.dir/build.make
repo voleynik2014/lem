@@ -2025,6 +2025,126 @@ CMakeFiles/lem_in1.dir/src/ft_calc_optimal_way.c.o.provides: CMakeFiles/lem_in1.
 CMakeFiles/lem_in1.dir/src/ft_calc_optimal_way.c.o.provides.build: CMakeFiles/lem_in1.dir/src/ft_calc_optimal_way.c.o
 
 
+CMakeFiles/lem_in1.dir/src/permutation.c.o: CMakeFiles/lem_in1.dir/flags.make
+CMakeFiles/lem_in1.dir/src/permutation.c.o: ../src/permutation.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/lem_in1.dir/src/permutation.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in1.dir/src/permutation.c.o   -c /nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/permutation.c
+
+CMakeFiles/lem_in1.dir/src/permutation.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in1.dir/src/permutation.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/permutation.c > CMakeFiles/lem_in1.dir/src/permutation.c.i
+
+CMakeFiles/lem_in1.dir/src/permutation.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in1.dir/src/permutation.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/permutation.c -o CMakeFiles/lem_in1.dir/src/permutation.c.s
+
+CMakeFiles/lem_in1.dir/src/permutation.c.o.requires:
+
+.PHONY : CMakeFiles/lem_in1.dir/src/permutation.c.o.requires
+
+CMakeFiles/lem_in1.dir/src/permutation.c.o.provides: CMakeFiles/lem_in1.dir/src/permutation.c.o.requires
+	$(MAKE) -f CMakeFiles/lem_in1.dir/build.make CMakeFiles/lem_in1.dir/src/permutation.c.o.provides.build
+.PHONY : CMakeFiles/lem_in1.dir/src/permutation.c.o.provides
+
+CMakeFiles/lem_in1.dir/src/permutation.c.o.provides.build: CMakeFiles/lem_in1.dir/src/permutation.c.o
+
+
+CMakeFiles/lem_in1.dir/src/some_calc.c.o: CMakeFiles/lem_in1.dir/flags.make
+CMakeFiles/lem_in1.dir/src/some_calc.c.o: ../src/some_calc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/lem_in1.dir/src/some_calc.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in1.dir/src/some_calc.c.o   -c /nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/some_calc.c
+
+CMakeFiles/lem_in1.dir/src/some_calc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in1.dir/src/some_calc.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/some_calc.c > CMakeFiles/lem_in1.dir/src/some_calc.c.i
+
+CMakeFiles/lem_in1.dir/src/some_calc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in1.dir/src/some_calc.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/some_calc.c -o CMakeFiles/lem_in1.dir/src/some_calc.c.s
+
+CMakeFiles/lem_in1.dir/src/some_calc.c.o.requires:
+
+.PHONY : CMakeFiles/lem_in1.dir/src/some_calc.c.o.requires
+
+CMakeFiles/lem_in1.dir/src/some_calc.c.o.provides: CMakeFiles/lem_in1.dir/src/some_calc.c.o.requires
+	$(MAKE) -f CMakeFiles/lem_in1.dir/build.make CMakeFiles/lem_in1.dir/src/some_calc.c.o.provides.build
+.PHONY : CMakeFiles/lem_in1.dir/src/some_calc.c.o.provides
+
+CMakeFiles/lem_in1.dir/src/some_calc.c.o.provides.build: CMakeFiles/lem_in1.dir/src/some_calc.c.o
+
+
+CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.o: CMakeFiles/lem_in1.dir/flags.make
+CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.o: ../src/ft_realloc_lemin.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.o   -c /nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/ft_realloc_lemin.c
+
+CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/ft_realloc_lemin.c > CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.i
+
+CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/ft_realloc_lemin.c -o CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.s
+
+CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.o.requires:
+
+.PHONY : CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.o.requires
+
+CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.o.provides: CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.o.requires
+	$(MAKE) -f CMakeFiles/lem_in1.dir/build.make CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.o.provides.build
+.PHONY : CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.o.provides
+
+CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.o.provides.build: CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.o
+
+
+CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.o: CMakeFiles/lem_in1.dir/flags.make
+CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.o: ../src/ft_delete_lemin_things.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.o   -c /nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/ft_delete_lemin_things.c
+
+CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/ft_delete_lemin_things.c > CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.i
+
+CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/ft_delete_lemin_things.c -o CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.s
+
+CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.o.requires:
+
+.PHONY : CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.o.requires
+
+CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.o.provides: CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.o.requires
+	$(MAKE) -f CMakeFiles/lem_in1.dir/build.make CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.o.provides.build
+.PHONY : CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.o.provides
+
+CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.o.provides.build: CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.o
+
+
+CMakeFiles/lem_in1.dir/src/ft_validation.c.o: CMakeFiles/lem_in1.dir/flags.make
+CMakeFiles/lem_in1.dir/src/ft_validation.c.o: ../src/ft_validation.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/lem_in1.dir/src/ft_validation.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in1.dir/src/ft_validation.c.o   -c /nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/ft_validation.c
+
+CMakeFiles/lem_in1.dir/src/ft_validation.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in1.dir/src/ft_validation.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/ft_validation.c > CMakeFiles/lem_in1.dir/src/ft_validation.c.i
+
+CMakeFiles/lem_in1.dir/src/ft_validation.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in1.dir/src/ft_validation.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/src/ft_validation.c -o CMakeFiles/lem_in1.dir/src/ft_validation.c.s
+
+CMakeFiles/lem_in1.dir/src/ft_validation.c.o.requires:
+
+.PHONY : CMakeFiles/lem_in1.dir/src/ft_validation.c.o.requires
+
+CMakeFiles/lem_in1.dir/src/ft_validation.c.o.provides: CMakeFiles/lem_in1.dir/src/ft_validation.c.o.requires
+	$(MAKE) -f CMakeFiles/lem_in1.dir/build.make CMakeFiles/lem_in1.dir/src/ft_validation.c.o.provides.build
+.PHONY : CMakeFiles/lem_in1.dir/src/ft_validation.c.o.provides
+
+CMakeFiles/lem_in1.dir/src/ft_validation.c.o.provides.build: CMakeFiles/lem_in1.dir/src/ft_validation.c.o
+
+
 # Object files for target lem_in1
 lem_in1_OBJECTS = \
 "CMakeFiles/lem_in1.dir/libft/ft_atoi.c.o" \
@@ -2108,7 +2228,12 @@ lem_in1_OBJECTS = \
 "CMakeFiles/lem_in1.dir/src/ft_create.c.o" \
 "CMakeFiles/lem_in1.dir/src/ft_lem_in.c.o" \
 "CMakeFiles/lem_in1.dir/src/ft_read.c.o" \
-"CMakeFiles/lem_in1.dir/src/ft_calc_optimal_way.c.o"
+"CMakeFiles/lem_in1.dir/src/ft_calc_optimal_way.c.o" \
+"CMakeFiles/lem_in1.dir/src/permutation.c.o" \
+"CMakeFiles/lem_in1.dir/src/some_calc.c.o" \
+"CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.o" \
+"CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.o" \
+"CMakeFiles/lem_in1.dir/src/ft_validation.c.o"
 
 # External object files for target lem_in1
 lem_in1_EXTERNAL_OBJECTS =
@@ -2195,9 +2320,14 @@ lem_in1: CMakeFiles/lem_in1.dir/src/ft_create.c.o
 lem_in1: CMakeFiles/lem_in1.dir/src/ft_lem_in.c.o
 lem_in1: CMakeFiles/lem_in1.dir/src/ft_read.c.o
 lem_in1: CMakeFiles/lem_in1.dir/src/ft_calc_optimal_way.c.o
+lem_in1: CMakeFiles/lem_in1.dir/src/permutation.c.o
+lem_in1: CMakeFiles/lem_in1.dir/src/some_calc.c.o
+lem_in1: CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.o
+lem_in1: CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.o
+lem_in1: CMakeFiles/lem_in1.dir/src/ft_validation.c.o
 lem_in1: CMakeFiles/lem_in1.dir/build.make
 lem_in1: CMakeFiles/lem_in1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Linking C executable lem_in1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2016/v/voliynik/unit/lem_in/lem_in/lem_in1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Linking C executable lem_in1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lem_in1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -2287,6 +2417,11 @@ CMakeFiles/lem_in1.dir/requires: CMakeFiles/lem_in1.dir/src/ft_create.c.o.requir
 CMakeFiles/lem_in1.dir/requires: CMakeFiles/lem_in1.dir/src/ft_lem_in.c.o.requires
 CMakeFiles/lem_in1.dir/requires: CMakeFiles/lem_in1.dir/src/ft_read.c.o.requires
 CMakeFiles/lem_in1.dir/requires: CMakeFiles/lem_in1.dir/src/ft_calc_optimal_way.c.o.requires
+CMakeFiles/lem_in1.dir/requires: CMakeFiles/lem_in1.dir/src/permutation.c.o.requires
+CMakeFiles/lem_in1.dir/requires: CMakeFiles/lem_in1.dir/src/some_calc.c.o.requires
+CMakeFiles/lem_in1.dir/requires: CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.o.requires
+CMakeFiles/lem_in1.dir/requires: CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.o.requires
+CMakeFiles/lem_in1.dir/requires: CMakeFiles/lem_in1.dir/src/ft_validation.c.o.requires
 
 .PHONY : CMakeFiles/lem_in1.dir/requires
 
