@@ -59,7 +59,7 @@ void	ft_print_current_status(t_data *data)
 	}
 }
 
-void	ft_print_final_ways(t_flow *final_ways, t_data *data)
+void	ft_print_final_ways(t_data *data)
 {
 	int i;
 	int j;
@@ -109,7 +109,9 @@ void		ft_how_many(t_data *data)
 	while (data->all_possible_flows[++i])
 	{
 		if (data->all_possible_flows[i]->performance < data->final_ways->performance)
-		data->final_ways = data->all_possible_flows[++i];
+			data->final_ways = data->all_possible_flows[i];
+		else if (data->all_possible_flows[i]->performance == data->final_ways->performance && data->all_possible_flows[i]->max_perf_rooms < data->final_ways->max_perf_rooms)
+			data->final_ways = data->all_possible_flows[i];
 	}
 	i = -1;
 	while (data->final_ways->ways[++i])
@@ -120,6 +122,6 @@ void		ft_how_many(t_data *data)
 		data->final_ways->ways[i]->room[j] = data->rooms[data->count_rooms - 1];
 	}
 	ft_printf("final-ways\n");
-	ft_print_flows(data->final_ways, data);
-	ft_print_final_ways(data->final_ways, data);
+	ft_print_flows(data->final_ways);
+	ft_print_final_ways(data);
 }

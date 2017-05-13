@@ -26,36 +26,28 @@ void	get_num_ants(t_data *data)
 	if (check_valid_count_ants(line))
 		data->total_ants = atoi(line);
 	ft_strdel(&line);
-//	while (get_next_line(data->fd, &line))
+    if (!ft_read_line(data, line))
+        exit(ft_printf("Incorrect input\n") - 15);
+    if (!data->start_room || !data->end_room)
+        exit(ft_printf("Lost start or end room\n") - 22);
+}
+//
+//void	ft_print_map(t_data *data, t_lem **rooms)
+//{
+//	int i;
+//	int	j;
+//
+//	i = -1;
+//	ft_printf("%s, ", data->rooms[0]->links[0]->name);
+//	while (data->rooms[++i])
 //	{
-//		if (ft_strequ(line, "##start"))
-//		{
-			if (!ft_read_line(data, line))
-//			break ;
-//		}
-//		if (line[0] == '#' && line[1] != '#')
-//			ft_strdel(&line);
-//		else
-			exit(ft_printf("Incorrect input\n") - 15);
+//		ft_printf("room \"%s\" has links:\t", data->rooms[i]->name);
+//		j = -1;
+//		while (data->rooms[i]->links[++j])
+//			ft_printf("%s, ", data->rooms[i]->links[j]->name);
+//		ft_printf("\n");
 //	}
-}
-
-void	ft_print_map(t_data *data, t_lem **rooms)
-{
-	int i;
-	int	j;
-
-	i = -1;
-	ft_printf("%s, ", data->rooms[0]->links[0]->name);
-	while (data->rooms[++i])
-	{
-		ft_printf("room \"%s\" has links:\t", data->rooms[i]->name);
-		j = -1;
-		while (data->rooms[i]->links[++j])
-			ft_printf("%s, ", data->rooms[i]->links[j]->name);
-		ft_printf("\n");
-	}
-}
+//}
 
 void	ft_lem_in(void)
 {
@@ -65,22 +57,31 @@ void	ft_lem_in(void)
 	i = -1;
 	data = (t_data *)malloc(sizeof(t_data) * 1);
 	ft_bzero(data, sizeof(t_data));
-	data->fd = open("test1.txt", O_RDONLY);
+	data->fd = open("test.txt", O_RDONLY);
 	get_num_ants(data);
 //	ft_print_map(data, data->rooms);
+    sleep(999);
 	data->rooms_reserved = (t_lem **)
 		malloc(sizeof(t_lem *) * data->count_rooms + 1);
 	while (++i < data->count_rooms)
 		data->rooms_reserved[i] = NULL;
 	data->all_possible_ways = (t_way **)malloc(sizeof(t_way *) * 101);
 	build_new_way(data, data->rooms[0]);
-//	data->num_ants = 1;
+    i = -1;
+    while(data->rooms_reserved[++i])
+        free(data->rooms_reserved[i]);
 	data->start_room->count_ants = 1;
 	calc_optimal_way(data);
 }
 
 int		main(void)
 {
+	clock_t start, end;
+	start = clock();
 	ft_lem_in();
+	end = clock();
+
+	printf("The above code block was executed in %.4f second(s)\n", ((double) end - start) / ((double) CLOCKS_PER_SEC));
+    sleep(999);
 	return (0);
 }

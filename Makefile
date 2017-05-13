@@ -13,10 +13,16 @@
 NAME = Lem-in
 NAMELIB = libft.a
 
-SRC	=	ft_lem_in.c 		\
+SRC	=	ft_build_new_way.c	\
+		ft_calc_optimal_way.c	\
+		ft_delete_lemin_things.c	\
+		ft_realloc_lemin.c		\
+		ft_validation.c		\
+		permutation.c		\
+		some_calc.c			\
+		ft_lem_in.c 		\
 		ft_read.c			\
-		ft_create.c			\
-		ft_build_new_way.c
+		ft_create.c			
 OBJ		= $(addprefix $(OBJDIR), $(SRC:.c=.o))
 
 CC		= gcc

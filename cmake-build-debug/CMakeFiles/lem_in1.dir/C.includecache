@@ -9,6 +9,8 @@
 ../includes/lem_in.h
 ../libft/libft.h
 ../libft/libft.h
+time.h
+-
 
 ../libft/ft_printf.h
 stdarg.h

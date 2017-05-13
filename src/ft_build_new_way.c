@@ -60,7 +60,8 @@ int		no_repeat(t_data *data, t_lem *current_point)
 	return (TRUE);
 }
 
-void	build_new_way(t_data *data, t_lem *current_point) {
+void	build_new_way(t_data *data, t_lem *current_point)
+{
 	int i;
 
 	i = -1;
@@ -79,8 +80,6 @@ void	build_new_way(t_data *data, t_lem *current_point) {
 	i = -1;
 	while (current_point->links[++i])
 	{
-		if ((i - 1) == current_point->link_size)
-			ft_realloc_current_room(current_point);
 		if (no_repeat(data, current_point->links[i]))
 			build_new_way(data, current_point->links[i]);
 	}

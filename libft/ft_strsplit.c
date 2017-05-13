@@ -63,7 +63,7 @@ char			**ft_strsplit(char const *s, char c)
 	char	**arr;
 	int 	i;
 	size_t	j;
-	size_t 	arr_size;
+	int 	arr_size;
 
 	j = 0;
 	if (s == NULL)

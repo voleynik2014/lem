@@ -21,9 +21,17 @@ t_lem	*ft_create_room(t_data *data, char *line)
 	room = (t_lem *)malloc(sizeof(t_lem));
 	ft_bzero(room, sizeof(t_lem));
 	arr = ft_strsplit(line, ' ');
+	i = -1;
+	while (arr[++i])
+		;
+	if (i != 3)
+		exit(ft_printf("Incorrect input\n") - 15);
 	room->name = ft_strdup(arr[0]);
 	room->x = ft_atoi(arr[1]);
 	room->y = ft_atoi(arr[2]);
+	i = -1;
+	while (arr[++i])
+		free(arr[i]);
 	room->links = (t_lem **)malloc(sizeof(t_lem *) * 21);
 	i = -1;
 	while (++i < 21)

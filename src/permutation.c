@@ -45,7 +45,7 @@ int		check(t_way *posible_way, t_flow *stack)
 	return (TRUE);
 }
 
-void	ft_print_flows(t_flow *stack, t_data *data)
+void	ft_print_flows(t_flow *stack)
 {
 	int i;
 
@@ -87,16 +87,17 @@ void	ft_save_flow(t_flow *stack, t_data *data)
 	}
 	data->all_possible_flows[data->tmp]->quantity_ways = i - 1;
 	data->all_possible_flows[data->tmp]->performance = ft_ceil(total_perform, data->total_ants,i);
-	data->all_possible_flows[data->tmp]->max_perf_rooms = max_perform;
-	data->tmp++;
-//	ft_print_flows(data->all_possible_flows[data->tmp], data);
+	data->all_possible_flows[data->tmp]->max_perf_rooms = total_perform;
+
+//	ft_print_flows(data->all_possible_flows[data->tmp]);
+    data->tmp++;
 }
 
-void	rec(t_flow *stack, int *pos, t_data *data)
+void	rec(t_flow *stack, int *pos, t_data *data, int i)
 {
-	int i;
-
-	i = -1;
+//	int i;
+//
+//	i = -1;
 	while (data->all_possible_ways[++i])
 	{
 		if (check(data->all_possible_ways[i], stack))
@@ -106,7 +107,7 @@ void	rec(t_flow *stack, int *pos, t_data *data)
 			stack->ways[(*pos)++] = data->all_possible_ways[i];
 			stack->ways[(*pos)] = NULL;
 			ft_save_flow(stack, data);
-			rec(stack, pos, data);
+			rec(stack, pos, data, i);
 		}
 	}
 	(*pos) -= 1;
@@ -127,6 +128,7 @@ void	**permutation(t_data *data)
 	while (++i < data->count_rooms)
 		stack->ways[i] = NULL;
 	pos = 0;
-	rec(stack, &pos, data);
+	i = 0;
+	rec(stack, &pos, data, i);
 	return (FALSE);
 }

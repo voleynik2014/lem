@@ -12,17 +12,17 @@
 
 #include "lem_in.h"
 
-t_flow	*create_flow(t_data *data)
-{
-	t_flow	*flow;
-	int		way_size;
-
-	way_size = 10;
-	flow = (t_flow *)malloc(sizeof(t_flow));
-	flow->ways = (t_way **)malloc(sizeof(t_way *) * way_size);
-	flow->ways = NULL;
-	return (flow);
-}
+//t_flow	*create_flow(t_data *data)
+//{
+//	t_flow	*flow;
+//	int		way_size;
+//
+//	way_size = 10;
+//	flow = (t_flow *)malloc(sizeof(t_flow));
+//	flow->ways = (t_way **)malloc(sizeof(t_way *) * way_size);
+//	flow->ways = NULL;
+//	return (flow);
+//}
 //
 //void	realloc_flows(t_data *data, int num)
 //{

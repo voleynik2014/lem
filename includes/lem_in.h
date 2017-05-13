@@ -6,6 +6,8 @@
 
 # include "../libft/libft.h"
 
+#include <time.h>
+
 typedef struct		s_flow
 {
     int             id;
@@ -64,7 +66,7 @@ void ft_print_rooms(t_way *res_way);
 void    calc_optimal_way(t_data *data);
 
 void **permutation(t_data *data);
-void	ft_print_flows(t_flow *stack, t_data *data);
+void	ft_print_flows(t_flow *stack);
 
 void		ft_how_many(t_data *data);
 int ft_ceil(int total_perform, int total_ants, int i);
