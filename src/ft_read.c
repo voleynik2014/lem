@@ -75,8 +75,9 @@ int	ft_read_start_end_block(t_data *data, char *line, int *i)
 		if (data->end_room)
 			exit(ft_printf("Error:double end\n") - 16);
 		get_next_line(data->fd, &line);
-		data->rooms[(*i)++] = ft_create_room(data, line);
-		data->end_room = data->rooms[(*i) - 1];
+		data->rooms[(*i)] = ft_create_room(data, line);
+		data->end_room = data->rooms[(*i)];
+        (*i) += 1;
 		return (1);
 	}
 	else if (ft_strequ(line, "##start"))
@@ -84,8 +85,9 @@ int	ft_read_start_end_block(t_data *data, char *line, int *i)
 		if (data->start_room)
 			exit(ft_printf("Error:double start\n") - 18);
 		get_next_line(data->fd, &line);
-		data->rooms[(*i)++] = ft_create_room(data, line);
-		data->start_room = data->rooms[(*i) - 1];
+		data->rooms[(*i)] = ft_create_room(data, line);
+		data->start_room = data->rooms[(*i)];
+        (*i) += 1;
 		return (1);
 	}
 	return (0);
@@ -104,7 +106,7 @@ int		ft_read_line(t_data *data, char *line)
 			ft_read_links(data, line);
 			break;
 		}
-		else if (ft_read_start_end_block)
+		else if (ft_read_start_end_block(data, line, &i))
 			;
 		else
 		{

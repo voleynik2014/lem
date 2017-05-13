@@ -65,7 +65,7 @@ void	ft_lem_in(void)
 	i = -1;
 	data = (t_data *)malloc(sizeof(t_data) * 1);
 	ft_bzero(data, sizeof(t_data));
-	data->fd = open("test.txt", O_RDONLY);
+	data->fd = open("test1.txt", O_RDONLY);
 	get_num_ants(data);
 //	ft_print_map(data, data->rooms);
 	data->rooms_reserved = (t_lem **)
