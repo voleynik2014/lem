@@ -33,6 +33,7 @@ typedef struct		s_lem
 	int				y;
 	int				link_size;
 	struct s_lem	**links;
+	struct t_data	*asd;
 }					t_lem;
 
 typedef struct		s_data

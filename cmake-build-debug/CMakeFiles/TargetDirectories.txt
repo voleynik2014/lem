@@ -1,3 +1,3 @@
-/Users/Vlastyk/CLionProjects/lem_new/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/Vlastyk/CLionProjects/lem_new/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/Vlastyk/CLionProjects/lem_new/cmake-build-debug/CMakeFiles/lem_in1.dir
+/nfs/2016/v/voliynik/ClionProjects/lem_new/cmake-build-debug/CMakeFiles/edit_cache.dir
+/nfs/2016/v/voliynik/ClionProjects/lem_new/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/nfs/2016/v/voliynik/ClionProjects/lem_new/cmake-build-debug/CMakeFiles/lem_in1.dir

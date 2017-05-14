@@ -31,23 +31,6 @@ void	get_num_ants(t_data *data)
     if (!data->start_room || !data->end_room)
         exit(ft_printf("Lost start or end room\n") - 22);
 }
-//
-//void	ft_print_map(t_data *data, t_lem **rooms)
-//{
-//	int i;
-//	int	j;
-//
-//	i = -1;
-//	ft_printf("%s, ", data->rooms[0]->links[0]->name);
-//	while (data->rooms[++i])
-//	{
-//		ft_printf("room \"%s\" has links:\t", data->rooms[i]->name);
-//		j = -1;
-//		while (data->rooms[i]->links[++j])
-//			ft_printf("%s, ", data->rooms[i]->links[j]->name);
-//		ft_printf("\n");
-//	}
-//}
 
 void	ft_lem_in(void)
 {

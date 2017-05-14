@@ -121,14 +121,13 @@ int		ft_read_line(t_data *data, char *line)
             return (TRUE);
 		}
 		else if (ft_read_start_end_block(data, line, &i))
-			;
+			sleep(999);
 		else
 		{
             data->rooms[i++] = ft_create_room(data, line);
+			sleep(999);
 			if (i % 100 == 0 && i != 0)
 				data->rooms = ft_realloc_array_rooms(data, i, i + 100);
- //           if ((i - 1) == 0)
-//                data->start_room = data->rooms[i -1];       // переделать что бы стартовою комнату присваевало только тогда когда увидим надпись старт
         }
         free(line);
     }

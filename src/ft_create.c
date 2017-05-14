@@ -32,6 +32,7 @@ t_lem	*ft_create_room(t_data *data, char *line)
 	i = -1;
 	while (arr[++i])
 		free(arr[i]);
+	free(arr);
 	room->links = (t_lem **)malloc(sizeof(t_lem *) * 21);
 	i = -1;
 	while (++i < 21)
