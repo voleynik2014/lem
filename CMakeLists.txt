@@ -89,7 +89,7 @@ set(SOURCE_FILES
         src/ft_build_new_way.c
         src/ft_create.c
         src/ft_lem_in.c
-        src/ft_read.c src/ft_calc_optimal_way.c src/permutation.c src/some_calc.c src/ft_realloc_lemin.c src/ft_delete_lemin_things.c src/ft_validation.c)
+        src/ft_read.c src/ft_calc_optimal_way.c src/permutation.c src/some_calc.c src/ft_realloc_lemin.c src/ft_delete_lemin_things.c src/ft_validation.c src/ft_print_result.c)
 
 include_directories(includes)
 

@@ -345,6 +345,9 @@
 		<Unit filename="/nfs/2016/v/voliynik/ClionProjects/lem_new/src/ft_lem_in.c">
 			<Option target="lem_in1"/>
 		</Unit>
+		<Unit filename="/nfs/2016/v/voliynik/ClionProjects/lem_new/src/ft_print_result.c">
+			<Option target="lem_in1"/>
+		</Unit>
 		<Unit filename="/nfs/2016/v/voliynik/ClionProjects/lem_new/src/ft_read.c">
 			<Option target="lem_in1"/>
 		</Unit>

@@ -86,6 +86,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.o"
   "CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.o"
   "CMakeFiles/lem_in1.dir/src/ft_validation.c.o"
+  "CMakeFiles/lem_in1.dir/src/ft_print_result.c.o"
   "lem_in1.pdb"
   "lem_in1"
 )

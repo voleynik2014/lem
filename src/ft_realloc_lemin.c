@@ -60,13 +60,14 @@ t_way	**ft_realloc_ways_stack(int old_size ,int new_size, t_way **stack)
 	t_way	**new_way;
 	int		i;
 
+	ft_printf("asd");
 	new_way = (t_way **)malloc(sizeof(t_way *) * new_size);
 	i = -1;
 	while (++i < old_size)
 		new_way[i] = stack[i];
 	while (i < new_size)
 		new_way[i++] = NULL;
-//	free(stack);
+	free(stack);
 	return (new_way);
 }
 
@@ -83,6 +84,7 @@ t_flow	**ft_realloc_flows(t_data *data)
 		new_flow[i] = data->all_possible_flows[i];
 	while (i < new_size)
 		new_flow[i++] = NULL;
+	free(data->all_possible_flows);
 //	ft_delete_flow(data->all_possible_flows);
 	return (new_flow);
 }

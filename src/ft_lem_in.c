@@ -22,11 +22,11 @@ void	get_num_ants(t_data *data)
 	while (++i < 101)
 		data->rooms[i] = NULL;
 	if (!get_next_line(data->fd, &line)) // проверить валидность что бы были только цифры  // checked
-		line = NULL;
+		ft_strdel(&line);
 	if (check_valid_count_ants(line))
 		data->total_ants = atoi(line);
 	ft_strdel(&line);
-    if (!ft_read_line(data, line))
+    if (!ft_read_line(data))
         exit(ft_printf("Incorrect input\n") - 15);
     if (!data->start_room || !data->end_room)
         exit(ft_printf("Lost start or end room\n") - 22);
@@ -40,21 +40,19 @@ void	ft_lem_in(void)
 	i = -1;
 	data = (t_data *)malloc(sizeof(t_data) * 1);
 	ft_bzero(data, sizeof(t_data));
-	data->fd = open("test.txt", O_RDONLY);
+	data->fd = open("test1.txt", O_RDONLY);
 	get_num_ants(data);
-//	ft_print_map(data, data->rooms);
-    sleep(999);
 	data->rooms_reserved = (t_lem **)
 		malloc(sizeof(t_lem *) * data->count_rooms + 1);
 	while (++i < data->count_rooms)
 		data->rooms_reserved[i] = NULL;
 	data->all_possible_ways = (t_way **)malloc(sizeof(t_way *) * 101);
 	build_new_way(data, data->rooms[0]);
-    i = -1;
-    while(data->rooms_reserved[++i])
-        free(data->rooms_reserved[i]);
+	ft_build_start_to_end_room(data);
+	free(data->rooms_reserved);
 	data->start_room->count_ants = 1;
 	calc_optimal_way(data);
+	free(data);
 }
 
 int		main(void)

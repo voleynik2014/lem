@@ -63,7 +63,7 @@ void	ft_save_flow(t_flow *stack, t_data *data)
 	int total_perform;
 	int max_perform;
 
-	if ((data->tmp % 100) == 0)
+	if ((data->tmp % 100) == 0 && data->tmp != 0)
 		data->all_possible_flows = ft_realloc_flows(data);
 	data->all_possible_flows[data->tmp] = (t_flow *)malloc(sizeof(t_flow) * 1);
 	data->all_possible_flows[data->tmp]->ways = (t_way **)malloc(sizeof(t_way *) * data->count_rooms);
@@ -78,7 +78,6 @@ void	ft_save_flow(t_flow *stack, t_data *data)
 		if (i % data->count_rooms == 0 && i != 0 )
 			data->all_possible_flows[data->tmp]->ways = ft_realloc_ways_stack(i, i + data->count_rooms, data->all_possible_flows[data->tmp]->ways);
 		data->all_possible_flows[data->tmp]->ways[i] = stack->ways[i];
-//		ft_print_rooms(stack->ways[i]);
 		total_perform += stack->ways[i]->performance;
 		if (data->all_possible_flows[data->tmp]->ways[i]->performance >
 				max_perform)
@@ -88,30 +87,26 @@ void	ft_save_flow(t_flow *stack, t_data *data)
 	data->all_possible_flows[data->tmp]->quantity_ways = i - 1;
 	data->all_possible_flows[data->tmp]->performance = ft_ceil(total_perform, data->total_ants,i);
 	data->all_possible_flows[data->tmp]->max_perf_rooms = total_perform;
-
-//	ft_print_flows(data->all_possible_flows[data->tmp]);
     data->tmp++;
 }
 
-void	rec(t_flow *stack, int *pos, t_data *data, int i)
+void	rec(int *pos, t_data *data, int i)
 {
-//	int i;
-//
-//	i = -1;
+
 	while (data->all_possible_ways[++i])
 	{
-		if (check(data->all_possible_ways[i], stack))
+		if (check(data->all_possible_ways[i], data->stack))
 		{
 			if (((*pos) % data->count_rooms) == 0 && (*pos) != 0)
-				stack->ways = ft_realloc_ways_stack((*pos), (*pos) + data->count_rooms, stack->ways);
-			stack->ways[(*pos)++] = data->all_possible_ways[i];
-			stack->ways[(*pos)] = NULL;
-			ft_save_flow(stack, data);
-			rec(stack, pos, data, i);
+				data->stack->ways = ft_realloc_ways_stack((*pos), (*pos) + data->count_rooms, data->stack->ways);
+			data->stack->ways[(*pos)++] = data->all_possible_ways[i];
+			data->stack->ways[(*pos)] = NULL;
+			ft_save_flow(data->stack, data);
+			rec(pos, data, i);
 		}
 	}
 	(*pos) -= 1;
-	stack->ways[(*pos)] = NULL;
+	data->stack->ways[(*pos)] = NULL;
 }
 
 void	**permutation(t_data *data)
@@ -121,7 +116,8 @@ void	**permutation(t_data *data)
 	t_flow	*stack;
 
 
-	stack = (t_flow *)malloc(sizeof(t_flow) * 1);
+	data->stack = (t_flow *)malloc(sizeof(t_flow) * 1);
+	stack = data->stack;
 	ft_bzero(stack, sizeof(t_flow));
 	stack->ways = (t_way **)malloc(sizeof(t_way *) * data->count_rooms);
 	i = -1;
@@ -129,6 +125,14 @@ void	**permutation(t_data *data)
 		stack->ways[i] = NULL;
 	pos = 0;
 	i = 0;
-	rec(stack, &pos, data, i);
+	ft_printf("calc optimal_way\n");
+	rec(&pos, data, i);
+	i = -1;
+//	while (stack->ways[++i])
+//		free(stack->ways[i]);
+//	free(stack->ways);
+	ft_printf("sad\n");
+	sleep(4);
+//	free(stack);
 	return (FALSE);
 }

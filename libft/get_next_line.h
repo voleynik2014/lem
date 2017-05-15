@@ -14,7 +14,7 @@
 # define GET_NEXT_LINE_H
 # include "libft.h"
 # include <fcntl.h>
-# define BUFF_SIZE 50
+# define BUFF_SIZE 10
 
 typedef	struct		s_get
 {

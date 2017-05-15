@@ -23,22 +23,6 @@ int ft_ceil(int total_perform, int total_ants, int i)
 	return (inum + 1);
 }
 
-int     ft_valid_ways(t_data *data)
-{
-    int i;
-    int j;
-
-    i = -1;
-    while (data->final_ways->ways[++i])
-    {
-        j = -1;
-        while(data->final_ways->ways[i]->room[++j])
-            if (data->final_ways->ways[i]->room[j]->count_ants)
-                return (TRUE);
-    }
-    return (FALSE);
-}
-
 void	ft_print_current_status(t_data *data)
 {
 	int i;
@@ -58,6 +42,8 @@ void	ft_print_current_status(t_data *data)
 		}
 	}
 }
+
+
 
 void	ft_print_final_ways(t_data *data)
 {
@@ -102,10 +88,8 @@ void		ft_how_many(t_data *data)
 	int i;
 	int j;
 
-	data->final_ways = (t_flow *)malloc(sizeof(t_flow) * 1);
-	ft_bzero(data->final_ways, sizeof(t_flow));
 	data->final_ways = data->all_possible_flows[0];
-	i = 0;
+	i = -1;
 	while (data->all_possible_flows[++i])
 	{
 		if (data->all_possible_flows[i]->performance < data->final_ways->performance)
@@ -119,9 +103,12 @@ void		ft_how_many(t_data *data)
 		j = -1;
 		while (data->final_ways->ways[i]->room[++j])
 			;
-		data->final_ways->ways[i]->room[j] = data->rooms[data->count_rooms - 1];
+		data->final_ways->ways[i]->room[j] = data->end_room;
 	}
-	ft_printf("final-ways\n");
+	ft_printf("calc optimal_way2\n");
 	ft_print_flows(data->final_ways);
 	ft_print_final_ways(data);
+	ft_delete_all_ways(data);
+	ft_delete_all_rooms(data);
+	ft_delete_all_flows(data);
 }

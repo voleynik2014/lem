@@ -6,11 +6,11 @@
 #    By: voliynik <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/26 16:30:03 by voliynik          #+#    #+#              #
-#    Updated: 2017/03/29 20:50:45 by voliynik         ###   ########.fr        #
+#    Updated: 2017/05/15 21:09:39 by voliynik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Lem-in
+NAME = Lem_in
 NAMELIB = libft.a
 
 SRC	=	ft_build_new_way.c	\
@@ -22,6 +22,7 @@ SRC	=	ft_build_new_way.c	\
 		some_calc.c			\
 		ft_lem_in.c 		\
 		ft_read.c			\
+		ft_print_result.c	\
 		ft_create.c			
 OBJ		= $(addprefix $(OBJDIR), $(SRC:.c=.o))
 

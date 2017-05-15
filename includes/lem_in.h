@@ -33,7 +33,6 @@ typedef struct		s_lem
 	int				y;
 	int				link_size;
 	struct s_lem	**links;
-	struct t_data	*asd;
 }					t_lem;
 
 typedef struct		s_data
@@ -48,6 +47,7 @@ typedef struct		s_data
     struct s_flow   *final_ways;
 	struct s_lem	*start_room;
 	struct s_lem	*end_room;
+	struct s_flow	*stack;
     int             tmp;
 	int 			point;
 	int 			count_rooms_in_theway;
@@ -56,12 +56,14 @@ typedef struct		s_data
 void	get_num_ants(t_data *data);
 
 t_lem	*ft_search_room(t_data *data, char *source);
-int     ft_read_line(t_data *data, char *line);
+int     ft_read_line(t_data *data);
 void    ft_read_links(t_data *data, char *line);
 
 t_lem   *ft_create_room(t_data *data, char *line);
 
 void    build_new_way(t_data *data, t_lem *current_point);
+void	ft_build_start_to_end_room(t_data *data);
+
 void ft_print_rooms(t_way *res_way);
 
 void    calc_optimal_way(t_data *data);
@@ -74,6 +76,7 @@ int ft_ceil(int total_perform, int total_ants, int i);
 
 //validation
 int		check_valid_count_ants(char *line);
+int     ft_valid_ways(t_data *data);
 
 //realloc
 t_lem	*ft_realloc_current_room(t_lem *current_room);
@@ -85,6 +88,8 @@ t_lem	**ft_realloc_array_rooms(t_data *data, int old_num, int new_num);
 //delete
 void	ft_delete_room(t_lem *current_room);
 void	ft_delete_way(t_way **current_way);
-void	ft_delete_flow(t_flow **current_flow);
+void	ft_delete_all_ways(t_data *data);
+void	ft_delete_all_rooms(t_data *data);
+void	ft_delete_all_flows(t_data *data);
 
 #endif

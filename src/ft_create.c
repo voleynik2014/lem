@@ -12,12 +12,20 @@
 
 #include <lem_in.h>
 
+void	ft_error_input(char *line)
+{
+	free(line);
+	exit(ft_printf("Incorrect input\n") - 15);
+}
+
 t_lem	*ft_create_room(t_data *data, char *line)
 {
 	char	**arr;
 	t_lem	*room;
 	int		i;
 
+	if (ft_strchr(line, '-'))
+		ft_error_input(line);
 	room = (t_lem *)malloc(sizeof(t_lem));
 	ft_bzero(room, sizeof(t_lem));
 	arr = ft_strsplit(line, ' ');
@@ -25,7 +33,7 @@ t_lem	*ft_create_room(t_data *data, char *line)
 	while (arr[++i])
 		;
 	if (i != 3)
-		exit(ft_printf("Incorrect input\n") - 15);
+		ft_error_input(line);
 	room->name = ft_strdup(arr[0]);
 	room->x = ft_atoi(arr[1]);
 	room->y = ft_atoi(arr[2]);

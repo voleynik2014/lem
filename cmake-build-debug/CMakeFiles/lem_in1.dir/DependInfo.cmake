@@ -86,6 +86,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/nfs/2016/v/voliynik/ClionProjects/lem_new/src/ft_create.c" "/nfs/2016/v/voliynik/ClionProjects/lem_new/cmake-build-debug/CMakeFiles/lem_in1.dir/src/ft_create.c.o"
   "/nfs/2016/v/voliynik/ClionProjects/lem_new/src/ft_delete_lemin_things.c" "/nfs/2016/v/voliynik/ClionProjects/lem_new/cmake-build-debug/CMakeFiles/lem_in1.dir/src/ft_delete_lemin_things.c.o"
   "/nfs/2016/v/voliynik/ClionProjects/lem_new/src/ft_lem_in.c" "/nfs/2016/v/voliynik/ClionProjects/lem_new/cmake-build-debug/CMakeFiles/lem_in1.dir/src/ft_lem_in.c.o"
+  "/nfs/2016/v/voliynik/ClionProjects/lem_new/src/ft_print_result.c" "/nfs/2016/v/voliynik/ClionProjects/lem_new/cmake-build-debug/CMakeFiles/lem_in1.dir/src/ft_print_result.c.o"
   "/nfs/2016/v/voliynik/ClionProjects/lem_new/src/ft_read.c" "/nfs/2016/v/voliynik/ClionProjects/lem_new/cmake-build-debug/CMakeFiles/lem_in1.dir/src/ft_read.c.o"
   "/nfs/2016/v/voliynik/ClionProjects/lem_new/src/ft_realloc_lemin.c" "/nfs/2016/v/voliynik/ClionProjects/lem_new/cmake-build-debug/CMakeFiles/lem_in1.dir/src/ft_realloc_lemin.c.o"
   "/nfs/2016/v/voliynik/ClionProjects/lem_new/src/ft_validation.c" "/nfs/2016/v/voliynik/ClionProjects/lem_new/cmake-build-debug/CMakeFiles/lem_in1.dir/src/ft_validation.c.o"
